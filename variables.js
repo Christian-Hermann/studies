@@ -30,7 +30,20 @@
 // However, only the declrations are hoisted, not the initializations (assignments).
   
 // 1. Variables declared with var are hoisted to the top of their scope and initialized with undefined.
-// 2. Variables declared with let and const are hoisted
-  
+// 2. Variables declared with let and const are not hoisted
 
+// Hoisting in var
+console.log(a); // undefined (not a ReferenceError)
+var a = 10;
+console.log(a); // 10
+
+// Hoisting with let
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 10;
+console.log(b); // 10
+
+// Hoisting with const
+console.log(c); // ReferenceError: Cannot access 'c' before initialization
+const c = 10;
+console.log(c); // 10
 
