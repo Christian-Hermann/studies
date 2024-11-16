@@ -83,7 +83,16 @@ console.log(result);  // -Infinity
 /** Primitive values are passed to a function BY COPY, complex values are BY REFERENCE.
  *  What does this mean, and how are they different?
  *
+ *  By Value:
+ *  Applies to primitve data types.
+ *  A copy of the value is created when assigned or passed to a fucntion.
+ *  Changes to the new variable do not affect the original variable.
  * 
+ *  By Reference:
+ *  Applies to complex data types like objects and arrays.
+ *  A reference to the object is passed when assigned or passed to a function.
+ *  Changes to the new variable affect the orignal variable because they both reference 
+ *  the same object in memory.
  */
 
 // Primitive Example
