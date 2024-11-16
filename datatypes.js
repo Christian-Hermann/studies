@@ -59,19 +59,46 @@ console.log(myVariable); // Output: null
 let result = 0 / 0;  // Dividing zero by zero
 console.log(result);  // NaN
 
-/** Infinity && -Infinity
- * 
- * 
+/** Infinity 
+ * Represents an infinitley large number.
  */
+let result = 1 / 0;  // Dividing by zero
+console.log(result);  // Infinity
+
+/** -Infinty
+ * Represents an infinitley small (or negative) number.
+ */
+let result = -1 / 0;  // Dividing a negative number by zero
+console.log(result);  // -Infinity
+
 
 /** Difference between primitive/simple && complex data types
- * 
- * 
+ * Primitive/Simple data types is the official term used to refer to the 6 fundemental
+ * types in JavaScript (String, Number, BigInt, Boolean, Undefined, Null). While Complex 
+ * data types allow the creation of more complex structures like collections of data. 
+ * They store refrences to values, rather than the actual value itself. Examples include 
+ * objects, arrays, and functions.
  */
 
 /** Primitive values are passed to a function BY COPY, complex values are BY REFERENCE.
  *  What does this mean, and how are they different?
- * 
- * 
+ *
  * 
  */
+
+// Primitive Example
+let num1 = 10;
+let num2 = num1;  // num2 is a copy of num1
+num2 = 20;        // Changing num2 does not affect num1
+console.log(num1); // 10
+console.log(num2); // 20
+
+// Complex Example
+let obj1 = { name: "Alice", age: 25 };
+let obj2 = obj1;  // obj2 is a reference to obj1
+obj2.age = 30;     // Changing obj2 also changes obj1
+console.log(obj1.age); // 30
+console.log(obj2.age); // 30
+
+// Primitive: num2 is a copy of num1, so modifying num2 doesn't change num1.
+// Complex: obj2 is a reference to obj1, so modifying obj2 also modifies obj1
