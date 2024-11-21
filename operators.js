@@ -85,3 +85,14 @@ console.log(!a);  // false (inverts true)
 
 
 // Ternary Operator //
+condition ? value_if_true : value_if_false;
+// A ternary operator is shorthand for an if-else statement that evaluates a condition and
+// returns one of two values based on whether the condition is true or false. It is called ternary 
+// because it involves three operands: a condition, a result for true, and a result for false.
+
+let age = 18;
+let message = age >= 18 ? "You are an adult." : "You are a minor.";
+console.log(message);  // Output: "You are an adult."
+
+
+
