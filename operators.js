@@ -49,7 +49,39 @@ let product = a * b;  // product becomes 8
 
 
 // Logical Operators //
+&& || !
+// logical operators are used to combine or invert boolean (true/false) values and expressions.
+// these operators help to create more complex conditions in control flow statments.
+
+let a = true;
+let b = false;
+
+console.log(a && b);  // false, because b is false
+console.log(a || b);  // true, because a is true
+console.log(!a);      // false, because a is true and it is inverted
+console.log(!(a && b));  // true, because a && b is false, and the NOT inverts it
+
 
 // Unary Operators //
++ - ++ -- ! typeof void
+// Unary operators are operators that operate on a single operand, meaning they take
+// only one value or variable. these operators perform various operations like incrementing,
+// negating, or converting a value.
+
+let a = '10';
+console.log(+a);  // 10 (converts string '10' to number)
+
+let x = 5;
+console.log(-x);  // -5 (negates the number)
+
+let x = 5;
+console.log(++x);  // 6 (prefix: increments first, then returns value)
+
+let a = 10;
+console.log(--a);  // 9 (prefix: decrements first, then returns value)
+
+let a = true;
+console.log(!a);  // false (inverts true)
+
 
 // Ternary Operator //
