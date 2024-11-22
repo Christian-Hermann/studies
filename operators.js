@@ -1,5 +1,4 @@
 /** OPERATORS: 
- * 
  * In javascript operators are used to assign values, compare values, perform arithmetic 
  * operations and more. Below is a list of different types of operators.
  */
