@@ -1,4 +1,4 @@
-/** CONTROL FLOW
+/** CONTROL FLOW:
  * Control flow is the order in which the computer executes statements in a script.
  * Code is run in order from the first line in the file to the last line, Unless the computer
  * runs across the (extremely frequent) structures that change the control flow, such

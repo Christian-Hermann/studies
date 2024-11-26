@@ -1,4 +1,4 @@
-/** STRING MANIPULATION
+/** STRING MANIPULATION:
  *  String manipulation in Javascript is the process of modifying, transforming,
  * or interacting with strings of text using built-in methods and operations. Since strings
  * fundamentals in programming, Javascipt provides a wide array of built-in methods to handle
