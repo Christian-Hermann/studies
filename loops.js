@@ -17,7 +17,7 @@ for (initialization; condition; increment/decrement) {
     // Code to execute
   }
 
-// Example: 
+// Example // 
 for (let i = 0; i < 5; i++) {
     console.log(i);  // Outputs 0, 1, 2, 3, 4
   }
@@ -29,7 +29,7 @@ for (let key in object) {
     // Code to execute
   }
 
-// Example:
+// Example //
 // Object representing a car
 let car = {
     make: "Toyota",
@@ -60,8 +60,65 @@ while (i <= 5) {  // The condition to check (i must be <= 5)
   i++;  // Increment i by 1 after each iteration
 }
 
-// lok at studies page //
 
-// Looping over an array forwards and backwards //
+// Looping forwards over an array //
+function loopForward(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      console.log(arr[i]);
+    }
+  }
+  
+  // Example //
+  const myArray = [1, 2, 3, 4, 5];
+  loopForward(myArray);  // Output: 1, 2, 3, 4, 5
 
-// Looping over an object // 
+
+  // Looping backwards over an array // 
+function loopBackward(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      console.log(arr[i]);
+    }
+  }
+  
+  // Example //
+  const myArray = [1, 2, 3, 4, 5];
+  loopBackward(myArray);  // Output: 5, 4, 3, 2, 1
+  
+
+// Looping over an object //
+const person = {
+    name: "Alice",
+    age: 25,
+    city: "Paris"
+  };
+  
+  // Looping using for...in //
+  for (let key in person) {
+    if (person.hasOwnProperty(key)) {  // Ensure it's the object's own property
+      console.log(key + ": " + person[key]);
+    }
+  }
+  
+  // Looping using Object.keys() //
+  Object.keys(person).forEach(function(key) {
+    console.log(key + ": " + person[key]);
+  });
+  
+  // 3. Looping using Object.values() //
+  Object.values(person).forEach(function(value) {
+    console.log(value);
+  });
+  
+  // Looping using Object.entries() with forEach //
+  Object.entries(person).forEach(function(entry) {
+    const key = entry[0];
+    const value = entry[1];
+    console.log(key + ": " + value);
+  });
+  
+  // Looping using for...of with Object.entries() //
+  for (const entry of Object.entries(person)) {
+    const key = entry[0];
+    const value = entry[1];
+    console.log(key + ": " + value);
+  }
