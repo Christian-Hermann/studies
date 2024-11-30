@@ -116,5 +116,34 @@ function greet() {
   console.log(localVar);  // Error: localVar is not defined
 
 // Block Scope //
-
+// In ES6 let, and const introduced block scope, let and const have block-level scope. They 
+// are scoped to the nearest enclosing block (like loops, if statements, or code blocks iin functions)
+function checkScope() {
+    if (true) {
+      let blockScoped = "I am block scoped";
+      console.log(blockScoped);  // Accessible within the block
+    }
+  
+    console.log(blockScoped);  // Error: blockScoped is not defined (outside block)
+  }
+  
+checkScope();
+  
 // Closures // 
+// Closures allow a function to access variables from its outer function even after the outer 
+// function has finsihed executing. Closures allow inner functions to remember the environment 
+// in which they were created, this is useful for creating private variables, implementing data
+// encapsulation and creating functions that can maintain state across multiple locations. 
+
+function outer() {
+    let outerVariable = 'I am from outer function';
+
+    function inner() {
+        console.log(outerVariable);  // inner() can access outerVariable
+    }
+
+    return inner;  // outer() returns the inner function
+}
+
+const closureFunction = outer();  // outer() is called, returning inner()
+closureFunction();  // "I am from outer function"
